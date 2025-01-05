@@ -24,8 +24,7 @@ namespace RapidApiBooking.Controllers
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                //model = JsonConvert.DeserializeObject<List<BookingModel>>(body);
-                Console.WriteLine(body);
+                model = JsonConvert.DeserializeObject<List<BookingModel>>(body);
                 return View(model);
             }
         }

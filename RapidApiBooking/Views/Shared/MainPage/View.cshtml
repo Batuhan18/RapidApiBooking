@@ -1,4 +1,4 @@
-﻿
+﻿@model List<RapidApiBooking.Models.BookingModel>
 
 @{
     Layout = null;
@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" href="~/royal-master/image/favicon.png" type="image/png">
-    <title>Royal Hotel</title>
+    <title>Viyana Oteller</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="~/royal-master/css/bootstrap.css">
     <link rel="stylesheet" href="~/royal-master/vendors/linericon/style.css">
@@ -29,7 +29,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h" href="index.html"><img src="~/royal-master/image/Logo.png" alt=""></a>
+                <a class="navbar-brand logo_h" href="index.html"><img src="~/royal-master/image/1.jpg" alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -92,7 +92,7 @@
                                     <div class="book_tabel_item">
                                         <div class="input-group">
                                             <select class="wide">
-                                                <option data-display="Adult">Yetişkin</option>
+                                                <option data-display="Yetişkin">Yetişkin</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="input-group">
                                             <select class="wide">
-                                                <option data-display="Child">Çocuk</option>
+                                                <option data-display="Çocuk">Çocuk</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -112,7 +112,7 @@
                                     <div class="book_tabel_item">
                                         <div class="input-group">
                                             <select class="wide">
-                                                <option data-display="Child">Oda Sayısı</option>
+                                                <option data-display="Oda Sayısı">Oda Sayısı</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
@@ -135,71 +135,26 @@
             <div class="section_title text-center">
                 <h2 class="title_color">Otel Bilgileri</h2>
             </div>
+
             <div class="row mb_30">
+
                 <div class="col-lg-3 col-sm-6">
                     <div class="accomodation_item text-center">
                         <div class="hotel_img">
-                            <img src="~/royal-master/image/room1.jpg" alt="">
-                            <a href="#" class="btn theme_btn button_hover">Book Now</a>
+                            <img src="@* @item.photoUrls[0] *@" alt="">
+                            <a href="#" class="btn theme_btn button_hover">Rezervasyon Yap</a>
                         </div>
-                        <a href="#"><h4 class="sec_h4">Double Deluxe Room</h4></a>
-                        <h5>$250<small>/night</small></h5>
+                        <a href="#"><h4 class="sec_h4">@* @item.name *@</h4></a>
+                        <h5>$@* @item.value *@<small>/gecelik</small></h5>
                     </div>
                 </div>
+
             </div>
+
         </div>
     </section>
     <!--================ Accomodation Area  =================-->
     <!--================ Facilities Area  =================-->
-    @RenderBody()
-    @* <section class="facilities_area section_gap">
-        <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">
-        </div>
-        <div class="container">
-            <div class="section_title text-center">
-                <h2 class="title_w">Royal Facilities</h2>
-                <p>Who are in extremely love with eco friendly system.</p>
-            </div>
-            <div class="row mb_30">
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="facilities_item">
-                        <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                        <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> *@
     <!--================ Facilities Area  =================-->
     <!--================ About History Area  =================-->
     <section class="about_history_area section_gap">
@@ -207,9 +162,8 @@
             <div class="row">
                 <div class="col-md-6 d_flex align-items-center">
                     <div class="about_content ">
-                        <h2 class="title title_color">About Us <br>Our History<br>Mission & Vision</h2>
-                        <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
-                        <a href="#" class="button_hover theme_btn_two">Request Custom Price</a>
+                        <h2 class="title title_color">Viyana Hakkında</h2>
+                        <p>Viyana, tarihi zenginlikleri, kültürel mirası ve sanat dolu atmosferiyle Avrupa'nın en etkileyici şehirlerinden biridir. Avusturya'nın başkenti, muazzam mimarisi, müzeleri ve klasik müzik sahnesiyle dünya çapında ünlüdür.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
@@ -263,7 +217,7 @@
                         <div id="mc_embed_signup">
                             <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative">
                                 <div class="input-group d-flex flex-row">
-                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '" required="" type="email">
+                                    <input name="EMAIL" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Adresi '" required="" type="email">
                                     <button class="btn sub-btn"><span class="lnr lnr-location"></span></button>
                                 </div>
                                 <div class="mt-10 info"></div>

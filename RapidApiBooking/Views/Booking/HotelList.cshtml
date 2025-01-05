@@ -135,9 +135,10 @@
             <div class="section_title text-center">
                 <h2 class="title_color">Otel Bilgileri</h2>
             </div>
-            <div class="row mb_30">
-                @foreach (var item in Model)
-                {
+            @foreach (var item in Model)
+            {
+                <div class="row mb_30">
+
                     <div class="col-lg-3 col-sm-6">
                         <div class="accomodation_item text-center">
                             <div class="hotel_img">
@@ -148,8 +149,9 @@
                             <h5>$@item.value<small>/gecelik</small></h5>
                         </div>
                     </div>
-                }
-            </div>
+
+                </div>
+            }
         </div>
     </section>
     <!--================ Accomodation Area  =================-->
