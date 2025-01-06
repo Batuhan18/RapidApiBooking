@@ -5,4 +5,3 @@ I have completed the cases for the RapidAPI project as part of the training cond
 
 📍Real-time data was utilized with RapidAPI.
 
-For details, check my GitHub Link
